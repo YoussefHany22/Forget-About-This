@@ -37,7 +37,7 @@ void user::addUser(unordered_map<string, user>& Users, deque<user>& UserQueue)
 	cin >> governorate;//use enum function
 	if (country != "Egypt")
 	{
-		cout << "Omak Ar3a\n";
+		cout << "Only Egyptians are allowed to register!\n";
 		correctData = false;
 	}
 	if (gender == 'm' || gender == 'f' || gender == 'F' || gender == 'M')
@@ -47,13 +47,13 @@ void user::addUser(unordered_map<string, user>& Users, deque<user>& UserQueue)
 	}
 	else
 	{
-		cout << "Gender incorrect,you netflix worshipper mother fucker\n";
+		cout << "Gender incorrect!\n";
 		correctData = false;
 	}
 	if (it != Users.end())
 	{
 
-		cout << "dh 3ndha\n";
+		cout << "User ID Already Exists!\n";
 		correctData = false;
 
 	}
