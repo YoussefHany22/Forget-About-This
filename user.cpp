@@ -139,16 +139,12 @@ void user::displayUser()
 {
 	cout << "ID: " << getID() << "\nName: " << UName << "\nGender: " << gender << "\nAge: "<< age<<endl;
 }
-void user::AddToVaccineQueue(user IntoQueue,deque<user>&UserQueue)
+void user::AddToVaccineQueue(user IntoQueue,deque<user>&UserQueue)//This function is called when the user wants to apply for vaccine after logging in
 {
 	UserQueue.push_back(IntoQueue);
 }
-void user::AddToVaccineQueue(string id,unordered_map<string,user>&UserTable,deque<user>&UserQueue)
+void user::AddToVaccineQueue(string id,unordered_map<string,user>&UserTable,deque<user>&UserQueue) //This function is only called when the user applies for vaccine on registration
 {
-	
-	
-	
-	
 	UserQueue.push_back(UserTable.at(id));
 }
 user::user()
