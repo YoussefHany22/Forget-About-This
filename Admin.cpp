@@ -51,6 +51,15 @@ void Admin::DeleteUser(deque<user>&UserQueue,string ID)
 		UserStack.pop();
 	}
 }
+void Admin::setID(string ID)
+{
+	this->nationalId = ID;
+}
+void Admin::setPass(string Pass)
+{
+	this->password = Pass;
+}
+
 void Admin::viewUser(vector<user>& UsersInFile, string id)
 {
 	for (int i = 0; i < UsersInFile.size(); i++)
@@ -62,15 +71,15 @@ void Admin::viewUser(vector<user>& UsersInFile, string id)
 		}
 	}
 }
-Admin::Admin(string id, string pass, string name, char gender, int age)
+Admin::Admin(string id, string pass, string name, char gender, double age)
 {
 	this->age = age;
 	this->gender = gender;
-	this->nationalId = id;
-	this->password = pass;
-	this->UName = name;
+	nationalId = id;
+	password = pass;
+	UName = name;
 }
-void Admin::addAdmin(string id, string pass, string name, string gender, int age)
+void Admin::addAdmin(string id, string pass, string name, string gender, double age)
 {
 
 }

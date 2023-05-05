@@ -1,5 +1,5 @@
 #include "user.h"
-user::user(string UNameNEW, string nationalIdNEW, string passwordNEW, char genderNEW, int ageNEW, string countryNEW, string governorateNEW,int timesVaccinatedNew, bool isVaccined, bool applyForVaccine)
+user::user(string UNameNEW, string nationalIdNEW, string passwordNEW, char genderNEW, double ageNEW, string countryNEW, string governorateNEW, double timesVaccinatedNew, bool isVaccined, bool applyForVaccine)
 {
 	UName = UNameNEW;
 	nationalId = nationalIdNEW;
@@ -171,6 +171,14 @@ string user::getID()
 string user::getPass()
 {
 	return password;
+}
+void user::setID(string ID)
+{
+	this->nationalId = ID;
+}
+void user::setPass(string Pass)
+{
+	this->password = Pass;
 }
 user::~user()
 {

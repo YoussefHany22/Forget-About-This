@@ -13,12 +13,12 @@ using namespace std;
 {
 	string nationalId;
 	string password;
-	void addAdmin(string id, string pass, string name, string gender, int age);
+	void addAdmin(string id, string pass, string name, string gender, double age);
 
 public:
 	string UName;
 	char gender;
-	int age;
+	double age;
 	string getID();
 	string getPass();
 	void DeleteAllUsers(vector<user>&UsersVector,deque<user>&UsersQueue);
@@ -26,8 +26,10 @@ public:
 	void displayAllUsers(vector<user>& UsersInFile);
 	void displayQueue(deque<user>&UsersInQueue);
 	void DeleteUser(deque<user>& UserQueue, string ID);
+	void setPass(string Pass);
+	void setID(string ID);
 	Admin();
-	Admin(string id,string pass,string name,char gender,int age);
+	Admin(string id, string pass, string name, char gender, double age);
 	~Admin();
 };
 
